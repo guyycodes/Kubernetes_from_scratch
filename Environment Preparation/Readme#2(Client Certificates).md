@@ -243,18 +243,6 @@ cfssl gencert \
 
 }
 ```
-- output should look something like this:
-```
-2024/05/07 14:45:44 [INFO] generate received request
-2024/05/07 14:45:44 [INFO] received CSR
-2024/05/07 14:45:44 [INFO] generating key: rsa-2048
-2024/05/07 14:45:44 [INFO] encoded CSR
-2024/05/07 14:45:44 [INFO] signed certificate with serial number 65988910352517082984353664551851857916xxxxxxxxxx
-2024/05/07 14:45:44 [WARNING] This certificate lacks a "hosts" field. This makes it unsuitable for
-websites. For more information see the Baseline Requirements for the Issuance and Management
-of Publicly-Trusted Certificates, v.1.1.6, from the CA/Browser Forum (https://cabforum.org);
-specifically, section 10.2.3 ("Information Requirements").
-```
 
 # Generate kube-proxy certificate
 - input this command

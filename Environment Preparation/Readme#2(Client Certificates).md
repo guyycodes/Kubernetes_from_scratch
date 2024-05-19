@@ -37,7 +37,7 @@ cfssl gencert \
 
 #### Explination of the warning:
 ```
-The warning message you encountered is related to the generation of a certificate that lacks the "hosts" field, also known as the Subject Alternative Name (SAN) field. This field is crucial for defining the entities (domain names, IP addresses) for which the certificate is valid. When you're building a hosting service where applications can live, clients (browsers, other services) will connect to these applications via domain names or IP addresses. The certificate presented by your service during the TLS handshake must be valid for these domain names or IP addresses; otherwise, clients will raise security warnings or refuse to connect.
+The warning message encountered after running the previous command is related to the generation of a certificate that lacks the "hosts" field, also known as the Subject Alternative Name (SAN) field. This field is crucial for defining the entities (domain names, IP addresses) for which the certificate is valid. When you're building a hosting service where applications can live, clients (browsers, other services) will connect to these applications via domain names or IP addresses. The certificate presented by your service during the TLS handshake must be valid for these domain names or IP addresses; otherwise, clients will raise security warnings or refuse to connect.
 
 The CA/Browser Forum's Baseline Requirements specify that all publicly-trusted certificates must contain a SAN field that specifies the authorized domain names or IP addresses that the certificate covers. Without this field, the certificate is considered invalid for securing web traffic.
 

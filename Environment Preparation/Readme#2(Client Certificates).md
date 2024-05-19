@@ -93,13 +93,13 @@ For services that will be exposed to the Internet, you might consider using a th
 - assign the ip address from this first worker to the second variable
 * Perform this step for all worker nodes (in my case it looked like this)
 
-# * KUBERNETES REQUIRES LOWERCASE HOSTNAMES, ALL THINGS LOWERCASE!! * #
+# * KUBERNETES: USE LOWERCASE HOSTNAMES TO AVOID CASING TROUBLE* #
 
 ```
- WORKER0_HOST=levelup2   
+ WORKER0_HOST=levelup2
  WORKER0_IP=192.168.30.11
 
-// if you have worker nodes add them like this
+// if you have worker nodes add them like this but use lowercase, ive had trouble with uppercase in the past
  WORKER1_HOST=raspberrypHTTPS
  WORKER1_IP=192.168.30.245
 

@@ -9,14 +9,13 @@ For this course, we will need a total of **3 servers**:
 
 The operating system we will be using is **Ubuntu 20.04 LTS**.
 
-### In my setup Ill have:
+### In my setup Ill have a home network I built behing my ISP modem: But this can be done in the cloud
 #### Subnet 30 (Controller)
 - levelup1: as the Controller ip: 192.168.30.10 hostname: levelup1
 
 #### Subnet 30 (Worker)
 - levelup2 as a WORKER0: 192.168.30.11 hostname: levelup2
-- HTTPS as a WORKER1: 192.168.30.245 hostname: raspberrypHTTPS
-- HTTPS1 as a WORKER2: 192.168.30.251 hostname: raspiHTTPS1
+
 #### Subnet 20(Load Balancer)
 - raspberrypiLB as a LoabBalancer: 192.168.20.251 hostname: raspberrypiLB
 
@@ -53,8 +52,10 @@ The operating system we will be using is **Ubuntu 20.04 LTS**.
 
 #### Client Certificates
 - These provide authentication for various users: admin, kube-controller manager, kube proxy, kube-scheduler and the kublets
+
 #### Kubernetes API server certificate
 - The TLS certificate for the kubernetes API
+
 #### Service account Key Pair
 - Kubernetes uses a certificate to sign account tokens, which is what this certificate is for
     
@@ -63,7 +64,6 @@ The operating system we will be using is **Ubuntu 20.04 LTS**.
 - ``` mkdir kubeCertificateAuthority ``` ... or name it whatever youd like
 - ``` cd kubeCertificateAuthority``` 
 * We will now create a certificate authority
-- run 
 ``` 
 {
 cat > ca-config.json <<EOF
@@ -106,20 +106,10 @@ cfssl gencert -initca ca-csr.json | cfssljson -bare ca
 } 
  ```
 
-- Execute those commands inside your newly created directory: you should get output like this: 
-``` 
-2024/05/07 12:08:33 [INFO] generating a new CA key and certificate from CSR
-2024/05/07 12:08:33 [INFO] generate received request
-2024/05/07 12:08:33 [INFO] received CSR
-2024/05/07 12:08:33 [INFO] generating key: rsa-2048
-2024/05/07 12:08:33 [INFO] encoded CSR
-2024/05/07 12:08:33 [INFO] signed certificate with serial number 4839629224860005777600xxxxxxxxxxxxxxxxxxxxxxxxxx 
-```
+- Execute those commands inside your newly created directory
 - ls should yeild: 
 ```
 ca-config.json ca-csr.json    ca-key.pem     ca.csr         ca.pem
 ```
 - ca-key.pem is the private certificate
 - ca.pem is the public certificate (various components will need this to authenticate we will be placing it many places)
-
-# Move onto Readme#2 for Client Certificates

@@ -1,8 +1,7 @@
 # etc
 #### etcd: is a distributed key:value store that provides a reliable way to store data across a cluster of machines
-- etcd provides a way to store data across a distributed cluster of machines and makes sure the data is syncronized aross all machines
-- The data needs to be stored an reliably syncronozed across all controller nodes in the cluster
-- the data needs to be reliable stored across all controler nodes and create an etcd cluster that includes all of those controler nodes
+- etcd provides a way to store data across a distributed cluster of machines and makes sure the data is syncronized across all machines
+- The data needs to be stored an reliably syncronozed across all controller nodes in the cluster includes all of those controler nodes
 
 ##### Steps (do all commands on all controler servers)
 - log into the control server(s)

@@ -640,33 +640,9 @@ kubectl get pod -l k8s-app=calico-node -n kube-system
 
 
 //////////////////////////////////////////////////////
-* Next Steps
-Install and configure calicoctl.
-Networking Configuration:
-For default BGP networking with full-mesh node-to-node peering and no encapsulation, configure BGP peering.
-For encapsulation or other networking options, determine the best networking option for your environment.
-* VXLAN Encapsulation: VXLAN is a network overlay technology that encapsulates Layer 2 Ethernet frames within Layer 3 UDP packets. By setting this to "Always", Calico will encapsulate all pod-to-pod traffic within VXLAN packets, regardless of whether the source and destination are on the same or different nodes.
+E
+//////////////////////////////////////////////////////
 
-
-//////////////////////////////////////////////////////////////////
-
-cat <<EOF | kubectl apply -f -
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: admin-and-kubernetes-clusterrolebinding
-subjects:
-- kind: User
-  name: admin  # The admin user's name
-  apiGroup: rbac.authorization.k8s.io
-- kind: User
-  name: kubernetes  # The kubernetes user's name
-  apiGroup: rbac.authorization.k8s.io
-roleRef:
-  kind: ClusterRole
-  name: cluster-admin
-  apiGroup: rbac.authorization.k8s.io
-EOF
 
 cat <<EOF | kubectl apply -f -
 apiVersion: apps/v1

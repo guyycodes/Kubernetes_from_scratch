@@ -1,7 +1,7 @@
 Kubernetes Setup Guide
 ======================
-
-Welcome to the Kubernetes Setup Guide! This guide aims to help you get started with Kubernetes, a powerful open-source platform for automating deployment, scaling, and management of containerized applications. Whether you are a beginner or an experienced professional, this guide will provide step-by-step instructions to set up your Kubernetes cluster from scratch.
+![Kubernetes Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/100px-Kubernetes_logo_without_workmark.svg.png)
+Welcome to the Kubernetes Setup Guide! This guide aims to help you get started with Kubernetes, a powerful open-source platform for automating deployment, scaling, and management of containerized applications. This guide will provide step-by-step instructions to set up your Kubernetes cluster from scratch. There are many tools that automater this process, but if your interested in learning Kubernetes a little more deeply this guide can help.
 
 Prerequisites
 -------------
@@ -20,6 +20,7 @@ Before you begin, make sure you have the following:
 
     -   Stable internet connection for downloading required components
     -   Private network connectivity between all nodes in the cluster
+    -   A free account with Docker & Dockerhub
 -   Other Tools and Dependencies:
 
     -   `kubectl` (Kubernetes command-line tool)

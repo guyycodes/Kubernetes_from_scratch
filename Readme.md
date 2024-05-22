@@ -1,7 +1,7 @@
 Kubernetes Setup Guide
 ======================
 ![Kubernetes Logo](https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/100px-Kubernetes_logo_without_workmark.svg.png)
-Welcome to the Kubernetes Setup Guide! This guide aims to help you get started with Kubernetes, a powerful open-source platform for automating deployment, scaling, and management of containerized applications. This guide will provide step-by-step instructions to set up your Kubernetes cluster from scratch. There are many tools that automater this process, but if your interested in learning Kubernetes a little more deeply this guide can help.
+Welcome to the Kubernetes Setup Guide! This guide aims to help you get started with Kubernetes, a powerful open-source platform for automating deployment, scaling, and management of containerized applications. This guide will provide step-by-step instructions to set up your Kubernetes cluster from scratch. There are many tools that automate this process, but if your interested in learning Kubernetes a little more deeply this guide can help.
 
 Prerequisites
 -------------

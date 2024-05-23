@@ -38,7 +38,7 @@ The operating system we will be using is **Ubuntu 20.04 LTS**.
 
    * chmod +x cfssl cfssljson
    * sudo mv cfssl cfssljson /usr/local/bin/
-   * Finally, verify that the binaries are available in the /usr/local/bin/ directory by running: ls -l /usr/local/bin/cfssl /usr/local/bin/cfssljson, you should see this permission next to the binaries ```  -rwxr-xr-x  ```
+   * Finally, verify that the binaries are available in the /usr/local/bin/ directory by running: ls -l /usr/local/bin/cfssl /usr/local/bin/cfssljson, you should see this permission next to the binaries 
     - or use: 
    * brew instal cfssl
 
